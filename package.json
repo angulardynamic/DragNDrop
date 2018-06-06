@@ -28,9 +28,10 @@
   "bugs": {
     "url": "https://github.com/akserg/ng2-dnd/issues"
   },
-  "main": "./bundles/ng2-dnd.umd.js",
-  "module": "./ng2-dnd.es5.js",
-  "typings": "./ng2-dnd.d.ts",
+   "main": "./bundles/ng2-dnd.umd.js",
+   "module": "./dist/esm5/ng2-dnd.js",
+   "typings": "./dist/ng2-dnd.d.ts",
+
   "homepage": "https://github.com/akserg/ng2-dnd#readme",
   "peerDependencies": {
     "@angular/core": "^6.0.0",
