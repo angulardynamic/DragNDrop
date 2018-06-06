@@ -3,14 +3,6 @@
   "description": "Angular 2 Drag-and-Drop without dependencies",
   "version": "6.0.0",
   "sideEffects": false,
-  "scripts": {
-    "test": "karma start",
-    "clean": "rimraf dist",
-    "test-watch": "tsc --noUnusedParameters --noUnusedLocals && karma start --no-single-run --auto-watch",
-    "commit": "npm run prepublish && npm test && git-cz",
-    "build": "npm run clean && ngc && ng-packagr -p ng-package.json && copy style.css dist\\bundles\\style.css && rimraf dist/tests",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/akserg/ng2-dnd.git"
@@ -28,9 +20,9 @@
   "bugs": {
     "url": "https://github.com/akserg/ng2-dnd/issues"
   },
-  "main": "./bundles/ng2-dnd.umd.js",
-  "module": "./ng2-dnd.es5.js",
-  "typings": "./ng2-dnd.d.ts",
+  "main": "bundles/ng2-dnd.umd.js",
+  "module": "fesm5/ng2-dnd.js",
+  "typings": "ng2-dnd.d.ts",
   "homepage": "https://github.com/akserg/ng2-dnd#readme",
   "peerDependencies": {
     "@angular/core": "^6.0.0",
@@ -77,5 +69,14 @@
   },
   "engines": {
     "npm": ">4.0.0"
+  },
+  "es2015": "fesm2015/ng2-dnd.js",
+  "esm5": "esm5/ng2-dnd.js",
+  "esm2015": "esm2015/ng2-dnd.js",
+  "fesm5": "fesm5/ng2-dnd.js",
+  "fesm2015": "fesm2015/ng2-dnd.js",
+  "metadata": "ng2-dnd.metadata.json",
+  "dependencies": {
+    "tslib": "^1.9.0"
   }
 }
