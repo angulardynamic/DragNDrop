@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/akserg/ng2-dnd/issues"
   },
-   "main": "./bundles/ng2-dnd.umd.js",
+   "main": "./dist/bundles/ng2-dnd.umd.js",
    "module": "./dist/esm5/ng2-dnd.js",
    "typings": "./dist/ng2-dnd.d.ts",
 
