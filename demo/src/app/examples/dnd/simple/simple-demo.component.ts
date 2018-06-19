@@ -10,4 +10,3 @@ export class SimpleDemoComponent {
     tsCode: string = require('!!raw-loader!./dnd-simple.component');
 }
 
-// export { DndSimpleComponent } from './simple.component';

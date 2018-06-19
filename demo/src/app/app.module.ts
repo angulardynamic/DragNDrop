@@ -6,10 +6,8 @@ import 'prismjs/components/prism-typescript';
 
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
-
+// import { RouterModule } from '@angular/router';
 
 import { DndModule } from 'ng2-dnd';
 
@@ -18,7 +16,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { DemoDndModule } from './examples/demo.module';
 import { SharedModule } from './shared/shared.module';
 
-//import { routes } from './app.router';
+// import { routes } from './app.router';
 
 @NgModule({
   declarations: [
@@ -27,10 +25,9 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
     AppRoutingModule,
     SharedModule,
-    //RouterModule.forRoot(routes),
+    // RouterModule.forRoot(routes),
     DndModule.forRoot(),
     DemoDndModule
   ],

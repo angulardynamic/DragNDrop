@@ -1,8 +1,8 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {RouterModule} from '@angular/router';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {JsonpModule} from '@angular/http';
+
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 // import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -24,7 +24,6 @@ export {componentsList} from './side-nav/side-nav.component';
     // NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    JsonpModule
   ],
   declarations: [
     // ComponentWrapper,

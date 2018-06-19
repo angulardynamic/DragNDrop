@@ -2,20 +2,26 @@
 // This project is licensed under the terms of the MIT license.
 // https://github.com/akserg/ng2-dnd
 
-import { NgModule, ModuleWithProviders } from "@angular/core";
+import { ElementRef, ModuleWithProviders, NgModule } from "@angular/core";
 
-import {DragDropConfig} from './dnd.config';
-import {DragDropService, DragDropSortableService, dragDropServiceFactory, dragDropSortableServiceFactory} from './dnd.service';
-import {DraggableComponent, DraggableHandleComponent} from './draggable.component';
-import {DroppableComponent} from './droppable.component';
-import {SortableContainer, SortableComponent, SortableHandleComponent} from './sortable.component';
+import { DragDropConfig } from './config/drag-drop-config';
+import { DragDropService } from './service/drag-drop/drag-drop.service';
+import { dragDropServiceFactory } from './service/drag-drop/drag-drop.service.factory';
 
-export * from './abstract.component';
-export * from './dnd.config';
-export * from './dnd.service';
-export * from './draggable.component';
-export * from './droppable.component';
-export * from './sortable.component';
+import { DragDropSortableService } from './service/drag-drop-sortable/drag-drop-sortable.service';
+import { dragDropSortableServiceFactory } from './service/drag-drop-sortable/drag-drop-sortable.service.factory';
+import { DraggableDirective, DraggableHandleDirective, DroppableDirective, SortableContainerDirective, SortableDirective, SortableHandleDirective } from "./directives";
+
+// import { DraggableComponent, DraggableHandleComponent } from './draggable.component';
+// import { DroppableComponent } from './droppable.component';
+// import { SortableComponent, SortableContainer, SortableHandleComponent } from './sortable.component';
+
+export * from './directives/abstract';
+export * from './config';
+// export * from './draggable.component';
+// export * from './droppable.component';
+// export * from './sortable.component';
+export * from './directives';
 
 export let providers = [
     DragDropConfig,
@@ -24,8 +30,20 @@ export let providers = [
 ];
 
 @NgModule({
-  declarations: [DraggableComponent, DraggableHandleComponent, DroppableComponent, SortableContainer, SortableComponent, SortableHandleComponent],
-  exports : [DraggableComponent, DraggableHandleComponent, DroppableComponent, SortableContainer, SortableComponent, SortableHandleComponent],
+//   declarations: [
+//       DraggableComponent, DraggableHandleComponent, DroppableComponent, SortableContainer, SortableComponent, SortableHandleComponent
+//   ],
+//   exports : [
+//        DraggableComponent, DraggableHandleComponent, DroppableComponent, SortableContainer, SortableComponent, SortableHandleComponent
+//   ],
+    declarations: [
+        DraggableDirective, DraggableHandleDirective, DroppableDirective, SortableContainerDirective, SortableDirective, SortableHandleDirective
+    ],
+    exports: [
+        DraggableDirective, DraggableHandleDirective, DroppableDirective, SortableContainerDirective, SortableDirective, SortableHandleDirective
+    ],
+    entryComponents: [
+    ]
 
 })
 export class DndModule {

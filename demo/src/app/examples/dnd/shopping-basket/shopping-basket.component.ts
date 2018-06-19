@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'shoping-basket',
+    selector: 'shopping-basket',
     templateUrl: './shopping-basket.component.html'
 })
 export class ShoppingBasketComponent {

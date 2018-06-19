@@ -1,11 +1,11 @@
 import { inject, TestBed, ComponentFixture }
     from '@angular/core/testing';
 
-import {DragDropConfig} from '../src/dnd.config';
-import {SortableContainer, SortableComponent, SortableHandleComponent} from '../src/sortable.component';
-import {DragDropService, DragDropSortableService} from '../src/dnd.service';
+import { DragDropConfig } from '../src/config/drag-drop-config';
+import { SortableContainerDirective, SortableDirective, SortableHandleDirective } from '../src/directives';
+import { DragDropService, DragDropSortableService } from '../src/service';
 
-import {Container6, triggerEvent} from './dnd.component.factory';
+import { Container6, triggerEvent } from './dnd.component.factory';
 
 describe('Sortable Drag and Drop with handle', () => {
 
@@ -17,7 +17,7 @@ describe('Sortable Drag and Drop with handle', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [SortableContainer, SortableComponent, SortableHandleComponent, Container6],
+            declarations: [SortableContainerDirective, SortableDirective, SortableHandleDirective, Container6],
             providers: [DragDropConfig,
             DragDropService,
             DragDropSortableService]
