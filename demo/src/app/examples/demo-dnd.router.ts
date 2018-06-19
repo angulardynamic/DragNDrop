@@ -1,6 +1,7 @@
 import { Routes, Route } from '@angular/router';
 
-import { SimpleDemoComponent, DndSimpleComponent } from './dnd/simple';
+import { DndSimpleComponent } from './dnd/simple/dnd-simple.component';
+import { SimpleDemoComponent } from './dnd/simple/simple-demo.component';
 import { ZoneComponent } from './dnd/zone/zone.component';
 import { CustomDataComponent } from './dnd/custom-data/custom-data.component';
 import { CustomFunctionComponent } from './dnd/custom-function/custom-function.component';

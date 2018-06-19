@@ -1,9 +1,3 @@
-import {Component} from '@angular/core';
-
-declare var require: any;
-
-@Component({
-    template: `
 <dnd-simple></dnd-simple>
 <div class="row">
     <div class="col-sm-12">
@@ -14,11 +8,4 @@ declare var require: any;
             </div>
         </div>
     </div>
-</div>`
-})
-export class SimpleDemoComponent {
-    
-    tsCode: string = require('!!raw-loader!./simple.component');
-}
-
-export { DndSimpleComponent } from './simple.component';
+</div>
