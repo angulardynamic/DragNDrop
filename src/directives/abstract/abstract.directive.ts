@@ -58,7 +58,7 @@ export abstract class AbstractDirective {
     };
 
     this.element.ondragstart = (event: DragEvent) => {
-      if (isPresent(this.dragHandle)) {
+      if (this.dragEnabled && isPresent(this.dragHandle)) {
         if (this.dragHandle.contains(this.target as Element)) {
           event.preventDefault();
           return;
@@ -88,7 +88,6 @@ export abstract class AbstractDirective {
   set dragHandle(value: HTMLElement | undefined) {
     this._dragHandle = value;
   }
-
 
   /**
    * Run change detection manually to fix an issue in Safari.
