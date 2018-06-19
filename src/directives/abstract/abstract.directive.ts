@@ -7,7 +7,7 @@ import {isPresent} from '../../util';
 export abstract class AbstractDirective {
   element: HTMLElement;
   
-  private _dragHandle: HTMLElement;
+  private _dragHandle: HTMLElement | undefined;
   dragHelper: HTMLElement;
   defaultCursor: string;
 
@@ -85,7 +85,7 @@ export abstract class AbstractDirective {
     return this._dragHandle;
   }
 
-  set dragHandle(value: HTMLElement) {
+  set dragHandle(value: HTMLElement | undefined) {
     this._dragHandle = value;
   }
 
