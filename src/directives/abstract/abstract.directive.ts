@@ -138,6 +138,11 @@ export abstract class AbstractDirective {
     if (this.dragEnabled) {
       this.dragDropService.allowedDropZones = this.dropZones;
       this.dragStartCallback(event);
+      
+      // Fixed dragData of nested draggable element.
+      if (event.stopPropagation) {
+        event.stopPropagation();
+      }
     }
   }
 
