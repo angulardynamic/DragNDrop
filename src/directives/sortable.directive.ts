@@ -94,11 +94,13 @@ export class SortableDirective extends AbstractDirective {
     this._sortableDataService.index = null;
     this._sortableDataService.markSortable(null);
     // Add dragGata
+    //Fix drag end callback to emit dragData
+    const dragData = this.dragDropService.dragData;
     this.dragDropService.isDragged = false;
     this.dragDropService.dragData = null;
     this.dragDropService.onDragSuccessCallback = null;
     //
-    this.onDragEndCallback.emit(this.dragDropService.dragData);
+    this.onDragEndCallback.emit(dragData);
   }
 
   _onDragEnterCallback(event: Event) {
