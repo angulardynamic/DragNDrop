@@ -16,12 +16,10 @@ import { DraggableDirective, DraggableHandleDirective, DroppableDirective, Sorta
 // import { DroppableComponent } from './droppable.component';
 // import { SortableComponent, SortableContainer, SortableHandleComponent } from './sortable.component';
 
-export * from './directives/abstract';
 export * from './config';
-// export * from './draggable.component';
-// export * from './droppable.component';
-// export * from './sortable.component';
 export * from './directives';
+export * from './directives/abstract';
+export * from './service';
 
 export let providers = [
     DragDropConfig,
@@ -30,12 +28,6 @@ export let providers = [
 ];
 
 @NgModule({
-//   declarations: [
-//       DraggableComponent, DraggableHandleComponent, DroppableComponent, SortableContainer, SortableComponent, SortableHandleComponent
-//   ],
-//   exports : [
-//        DraggableComponent, DraggableHandleComponent, DroppableComponent, SortableContainer, SortableComponent, SortableHandleComponent
-//   ],
     declarations: [
         DraggableDirective, DraggableHandleDirective, DroppableDirective, SortableContainerDirective, SortableDirective, SortableHandleDirective
     ],
