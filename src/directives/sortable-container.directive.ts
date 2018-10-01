@@ -1,11 +1,11 @@
-import {ChangeDetectorRef, Directive, ElementRef, EventEmitter, Input, Output} from '@angular/core';
-import {FormArray} from '@angular/forms';
+import { ChangeDetectorRef, Directive, ElementRef, EventEmitter, Input, Output } from '@angular/core';
+import { FormArray } from '@angular/forms';
 
-import {DragDropConfig} from '../config';
-import {DragDropService, DragDropSortableService} from '../service';
-import {SortableArrayHandler, SortableFormArrayHandler} from '../util';
+import { DragDropConfig } from '../config';
+import { DragDropService, DragDropSortableService } from '../service';
+import { SortableArrayHandler, SortableFormArrayHandler } from '../util';
 
-import {AbstractDirective} from '../directives/abstract/abstract.directive';
+import { AbstractDirective } from '../directives/abstract/abstract.directive';
 
 /* tslint:disable directive-selector no-output-on-prefix */
 @Directive({selector: '[dnd-sortable-container]'})
@@ -26,7 +26,7 @@ export class SortableContainerDirective extends AbstractDirective {
     } else {
       this.sortableHandler = new SortableArrayHandler();
     }
-    //
+
     this.dropEnabled = !!this._sortableData;
     // console.log("collection is changed, drop enabled: " + this.dropEnabled);
   }
@@ -41,7 +41,8 @@ export class SortableContainerDirective extends AbstractDirective {
 
   constructor(
       elemRef: ElementRef, dragDropService: DragDropService, config: DragDropConfig, cdr: ChangeDetectorRef,
-      private _sortableDataService: DragDropSortableService) {
+      private _sortableDataService: DragDropSortableService
+    ) {
     super(elemRef, dragDropService, config, cdr);
     this.dragEnabled = false;
   }

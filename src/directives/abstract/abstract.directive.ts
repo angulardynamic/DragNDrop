@@ -1,8 +1,8 @@
-import {ChangeDetectorRef, ElementRef, ViewRef} from '@angular/core';
+import { ChangeDetectorRef, ElementRef, ViewRef } from '@angular/core';
 
-import {DragDropConfig, DragImage} from '../../config';
-import {DragDropService} from '../../service';
-import {isPresent, isFunction, isString, createImage, callFunction} from '../../util';
+import { DragDropConfig, DragImage } from '../../config';
+import { DragDropService } from '../../service';
+import { isPresent, isFunction, isString, createImage, callFunction } from '../../util';
 
 export abstract class AbstractDirective {
   element: HTMLElement;
@@ -102,9 +102,9 @@ export abstract class AbstractDirective {
 
       return false;
     };
+
     this.element.ondragleave = (event: Event) => this.dragLeave(event);
     this.element.ondrop = (event: Event) => this.drop(event);
-
 
     // Register drag events
     this.element.onmousedown = (event: MouseEvent) => {
@@ -260,7 +260,6 @@ export abstract class AbstractDirective {
 
     return false;
   }
-
 
   /**
    * Prevent the given events default action from being called and stops it from being propagated further.

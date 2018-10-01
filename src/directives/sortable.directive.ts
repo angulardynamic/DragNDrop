@@ -1,10 +1,10 @@
-import {ChangeDetectorRef, Directive, ElementRef, EventEmitter, Input, Output} from '@angular/core';
+import { ChangeDetectorRef, Directive, ElementRef, EventEmitter, Input, Output } from '@angular/core';
 
-import {DragDropConfig} from '../config';
-import {DragDropService, DragDropSortableService} from '../service';
+import { DragDropConfig } from '../config';
+import { DragDropService, DragDropSortableService } from '../service';
 
-import {AbstractDirective} from '../directives/abstract';
-import {SortableContainerDirective} from './sortable-container.directive';
+import { AbstractDirective } from '../directives/abstract';
+import { SortableContainerDirective } from './sortable-container.directive';
 
 /* tslint:disable directive-selector no-output-on-prefix no-output-rename no-input-rename */
 @Directive({selector: '[dnd-sortable]'})
